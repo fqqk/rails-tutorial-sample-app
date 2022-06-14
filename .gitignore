@@ -25,3 +25,6 @@
 
 # Ignore .irbrc
 .irbrc
+
+# Ignore .env
+/.env
