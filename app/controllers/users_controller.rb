@@ -27,9 +27,6 @@ class UsersController < ApplicationController
     else
       render "new"
     end
-  raise StandardError => e
-   logger.warn(e)
-   logger.debug("logger使えます")
   end
 
   def edit
