@@ -31,6 +31,11 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.before(:each, type: :system) do
+    driven_by(:selenium_chrome_headless)
+    # driven_by(:selenium_chrome)
+    # driven_by(:rack_test)
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -64,4 +69,5 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.filter_run_when_matching :focus
   include ApplicationHelper
+  include SessionsHelper
 end

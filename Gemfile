@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails',        '5.0.3'
+gem 'rails',        '5.1.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
@@ -30,7 +30,6 @@ group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
-  gem 'capybara'
 end
 
 group :development do
@@ -45,6 +44,9 @@ group :test do
   gem 'minitest-reporters',       '1.1.14'
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdriver'
 end
 
 group :production do
